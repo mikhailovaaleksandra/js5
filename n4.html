@@ -1,0 +1,10 @@
+<script>
+    let arrAver=function(arr){
+        let summa =arr.reduce((sum,elem)=>sum+elem,0);
+        return summa/arr.length;
+    }
+    let arr= Array.from(Array(10),()=>{return Math.round(Math.random()*20)});
+    console.log(arr.toString());
+    let aver=arrAver(arr);
+    console.log(aver.toFixed(1));
+ </script>

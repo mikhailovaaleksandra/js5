@@ -1,0 +1,8 @@
+<script>
+let arr= Array.from(Array(10),()=>{return Math.round(Math.random()*20)});
+console.log(arr.toString());
+let NewArr=arr.filter(elem=>elem>0 && elem<10);
+let sum=NewArr.reduce((sum,elem)=>sum+elem,0);
+console.log(sum);
+</script>
+

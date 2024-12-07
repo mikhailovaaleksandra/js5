@@ -1,0 +1,37 @@
+<script>
+    let data = [
+{
+1: 11,
+2: 12,
+3: 13,
+},
+{
+1: 21,
+2: 22,
+3: 23,
+},
+{
+1: 24,
+2: 25,
+3: 26,
+},
+];
+let ks=new Array();
+data.forEach(elem=>{
+    ks.push(Object.keys(elem));
+});
+console.log(ks.flat(2));
+let vals=new Array();
+data.forEach(elem=>{
+    vals.push(Object.values(elem));
+});
+console.log(vals.flat(2));
+console.log(vals.reduce((sum,elem)=>sum+elem,0));
+let sum=0;
+data.forEach(elem=>{
+    for ([ks,vals] of Object.entries(elem)) {
+        sum+=vals;
+    }
+});
+ console.log(sum);
+</script>
